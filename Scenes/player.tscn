@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyubm4i2r8x1b"]
+
+[ext_resource type="Script" uid="uid://hcu7oh4qubi6" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dbftabxn8hv50" path="res://Assets/ratPlaceHolder.png" id="1_v0iea"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(6.0000305, -9.999939)
+scale = Vector2(0.1200658, 0.13486844)
+texture = ExtResource("1_v0iea")
