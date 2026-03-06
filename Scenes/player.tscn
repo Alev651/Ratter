@@ -1,13 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyubm4i2r8x1b"]
+[gd_scene load_steps=4 format=3 uid="uid://cyubm4i2r8x1b"]
 
 [ext_resource type="Script" uid="uid://hcu7oh4qubi6" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dbftabxn8hv50" path="res://Assets/ratPlaceHolder.png" id="1_v0iea"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
+size = Vector2(5.1953125, 6.5703125)
+
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(6.0000305, -9.999939)
-scale = Vector2(0.1200658, 0.13486844)
+position = Vector2(0.99999905, 0)
+scale = Vector2(0.009251653, 0.011127655)
 texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_v0iea")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-15, 20)
+zoom = Vector2(4, 4)
